@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lan = "en">
+<html lan = "es">
     <head>
         <meta charset="UTF-8">
         <title> Inicio Sesión </title>
@@ -9,7 +9,7 @@
 
         <div class = "Box-White">
 
-            <div class = "Title" > Iniciar Sesión </div>
+            <h1 > Iniciar Sesión </h1>
 
             <form action = "../Controller/Login.php" method = "POST">
 
@@ -29,7 +29,6 @@
                 <?php include '../Controller/Extra/MSM.php'; ?>
             </div>
 
-            <div class = "Text" > ¿Olvidaste tu contraseña? Haz click <a href="login.php"> aqui</a> </div> 
             <div class = "Text" > ¿No estas registrado? <a href="index.php">Registrarte</a> </div> 
         
         </div>

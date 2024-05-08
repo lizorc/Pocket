@@ -19,7 +19,7 @@
         if (password_verify($Password, $Pass_Hash)) {
             
             // Success
-            $_SESSION['MSM'][] = 'Hola '.$Name;
+            $_SESSION['MSM']['Name'] = $_POST['Name'];
             header('Location: ../View/inicio.php');
             exit;
 

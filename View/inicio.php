@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html lan = "en">
+<html lan = "es">
     <head>
         <meta charset="UTF-8">
         <title> Inicio </title>
     </head>
 
     <body>
-         <div>
-            <?php include '../Controller/Extra/MSM.php'; ?>
+        <h1>
+           Hola <?php include '../Controller/Inicio.php'; echo $username; ?>            
+        </h1>
+
+        <div>
+        <a href="Logout.php">Cerrar Sesión</a>
+        </div>
+
+        <div>
+        <a href="registro_mov.php">Registrar Movimiento</a>
         </div>
 
     </body>

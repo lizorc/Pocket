@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lan = "en">
+<html lan = "es">
     <head>
         <meta charset="UTF-8">
         <title> Registro </title>
