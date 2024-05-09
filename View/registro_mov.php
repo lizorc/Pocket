@@ -38,11 +38,14 @@
 
                 <div class = "Text" > Motivo: </div>
                 <select name="Reason" required>
-                    <option value="">Selecciona una opción</option>
+                    <option value="">Selecciona una opción</option> 
+                    <option value="Venta">Venta</option>
                     <option value="Comida">Comida</option>
                     <option value="Salidas">Salidas</option>
-                    <option value="Gasolina">Gasolina</option>
+                    <option value="Quincena">Quincena</option>
                     <option value="Arriendo">Arriendo</option>
+                    <option value="Gasolina">Gasolina</option>
+                    <option value="Transferencia">Trasnferencia</option>
                 </select>
 
                 <div class = "Text" > Valor: </div>
