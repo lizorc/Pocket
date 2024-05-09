@@ -1,18 +1,12 @@
 <?php
-    include 'Extra/MSM.php';
+    session_start();
 
     if (!isset($_SESSION['Name'])) {
-        header('Location: ../View/login.php'); // Redirige al usuario si no ha iniciado sesión
+        header('Location: ../View/login.php');
         exit;
     } else {
-        $username = $_SESSION['MSM']['Name'];
-        header('Location: ../View/inicio.php');
-        exit;
+        $username = $_SESSION['Name'];
     }
-        
-    // Obtener el nombre de usuario desde la sesión    
-    $username = $_SESSION['Name'];
     
-    
-
+    session_abort();
 ?>

@@ -1,23 +1,22 @@
 <?php
-    include 'Extra/MSM.php';
+    session_start();
 
     if (!isset($_SESSION['Name'])) {
-        header('Location: ../View/login.php'); // Redirige al usuario si no ha iniciado sesión
+        header('Location: ../View/login.php');
         exit;
     } else {
-        $username = $_SESSION['MSM']['Name'];
-        header('Location: ../View/inicio.php');
-        exit;
+        $username = $_SESSION['Name'];
     }
-        
-    // Obtener el nombre de usuario desde la sesión    
-    $username = $_SESSION['Name'];
     
-    include 'Extra/BD.php';
+    session_abort();
     
-
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+        include 'Extra/BD.php';
+        include 'Extra/MSM.php';
+
+
         // Declarations
         $D = $_POST;
         $Date = $D['Date'];
@@ -29,18 +28,19 @@
         // Insert in the Table
         $insert = "INSERT INTO Movement (Name_User, Date, Account, Control, Reason, Value) VALUES ('$username', '$Date', '$Account', '$Control', '$Reason', '$Value')";
 
+        // $mensaje = ':)';
         if( mysqli_query($connection, $insert)){
 
             // Success
             $_SESSION['MSM'][] = 'Los Datos se han registrado exitosamente :)';
-            header('Location: ../View/inicio.php');
+            header('Location: ../View/registro_mov.php');
             exit;
 
         } else {
 
             // Fail
             $_SESSION['MSM'][] = 'Hubo un problema :(';
-            header('Location: ../View/inicio.php');
+            header('Location: ../View/registro_mov.php');
             exit;
 
         }
@@ -48,4 +48,5 @@
     }
 
     $connection -> close();
+    session_abort();
 ?>
