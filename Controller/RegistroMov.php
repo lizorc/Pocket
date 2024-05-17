@@ -2,7 +2,7 @@
     session_start();
 
     if (!isset($_SESSION['Name'])) {
-        header('Location: ../View/login.php');
+        header('Location: ../View/index.php');
         exit;
     } else {
         $username = $_SESSION['Name'];
@@ -32,7 +32,7 @@
         if( mysqli_query($connection, $insert)){
 
             // Success
-            $_SESSION['MSM'][] = 'Los Datos se han registrado exitosamente :)';
+            $_SESSION['MSM'][] = 'Los datos se han registrado exitosamente :)';
             header('Location: ../View/registro_mov.php');
             exit;
 

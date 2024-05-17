@@ -2,7 +2,7 @@
     session_start();
 
     if (!isset($_SESSION['Name'])) {
-        header('Location: ../View/login.php');
+        header('Location: ../View/index.php');
         exit;
     } else {
         $username = $_SESSION['Name'];

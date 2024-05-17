@@ -2,16 +2,16 @@
 <html lan = "es">
     <head>
         <meta charset="UTF-8">
-        <title> Registro </title>
+        <title> Inicio Sesión </title>
     </head>
 
     <body>
 
         <div class = "Box-White">
 
-            <div class = "Title" > Registrarte </div>
+            <h1 > Iniciar Sesión </h1>
 
-            <form action = "../Controller/Register.php" method = "POST">
+            <form action = "../Controller/Login.php" method = "POST">
 
                 <div class = "Text" > Nombre </div>
                 <input type = "text" name = "Name" required/>
@@ -20,7 +20,7 @@
                 <input type = "password" name = "Password" required/>
 
                 <div>
-                    <input class = "submit" type = "submit" value = "Registrarte"/>
+                    <input class = "submit" type = "submit" value = "Iniciar Sesión"/>
                 </div>
 
             </form>
@@ -29,8 +29,8 @@
                 <?php include '../Controller/Extra/MSM.php'; ?>
             </div>
 
-            <div class = "Text" > ¿Ya estas registrado? <a href="login.php">Iniciar Sesión</a> </div> 
-
+            <div class = "Text" > ¿No estas registrado? <a href="register.php">Registrarte</a> </div> 
+        
         </div>
 
     </body>

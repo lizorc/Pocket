@@ -26,7 +26,7 @@
         } else {
             // Fail
             $_SESSION['MSM'][] = 'Contraseña Incorrecta :( ';
-            header('Location: ../View/login.php');
+            header('Location: ../View/index.php');
             exit;
 
         }
@@ -34,7 +34,7 @@
         
         // Fail
         $_SESSION['MSM'][] = 'Usuario no Encontrado :(';
-        header('Location: ../View/login.php');
+        header('Location: ../View/index.php');
         exit;
     }
 

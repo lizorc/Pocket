@@ -7,7 +7,9 @@
 
     <body>
 
-        <div class = "Text" > Hola <?php include '../Controller/Inicio.php'; echo $username; ?> </div>
+        <h2>
+           Hola <?php include '../Controller/Inicio.php'; echo $username; ?>            
+        </h2>
         
         <div> <a href="inicio.php">Inicio</a> </div>
         

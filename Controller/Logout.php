@@ -1,6 +1,6 @@
 <?php
     session_start();
     session_destroy(); // Destruye la sesión
-    header('Location: ../View/login.php');
+    header('Location: ../View/logout.php');
     exit;
 ?>

@@ -17,20 +17,20 @@
         
         // Success
         $_SESSION['MSM'][] = 'Ya existe un Nombre registrado en el sistema :(  <a href="login.php">Iniciar Sesión</a>'; 
-        header('Location: ../View/index.php');
+        header('Location: ../View/register.php');
         exit;
     } if( mysqli_query($connection, $insert)){
 
         // Success
-        $_SESSION['MSM'][] = 'Te haz Registrado Exitosamente :)';
-        header('Location: ../View/index.php');
+        $_SESSION['MSM'][] = 'Te haz registrado Exitosamente :)';
+        header('Location: ../View/register.php');
         exit;
 
     } else {
 
         // Fail
-        $_SESSION['MSM'][] = 'No se :('; ?><a href="login.php">Iniciar Sesión</a> <?php
-        header('Location: ../View/index.php');
+        $_SESSION['MSM'][] = 'No se :('; ?><a href="index.php">Iniciar Sesión</a> <?php
+        header('Location: ../View/register.php');
         exit;
 
     }
