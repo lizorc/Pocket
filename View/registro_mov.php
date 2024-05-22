@@ -5,7 +5,7 @@
         <title> Registrar Movimiento </title>
     </head>
 
-    <body>
+    <body> 
 
         <h2>
            Hola <?php include '../Controller/Inicio.php'; echo $username; ?>            
